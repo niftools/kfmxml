@@ -7,15 +7,7 @@
     <version num="2.0.0.0b">Civilization IV, Sid Meier's Railroads</version>
     <version num="2.1.0.0b">Emerge, Megami Tensei: Imagine</version>
     <version num="2.2.0.0b">Emerge</version><!--33685515-->
-
-    <compound name="Animation">
-        <add name="Event Code" type="int" />
-        <add name="Name" type="SizedString" ver2="16927488" />
-        <add name="KF File Name" type="SizedString" />
-        <add name="Index" type="int">An index?</add>
-        <add name="Num Transitions" type="int" />
-        <add name="Transitions" type="Transition" arr1="Num Transitions">Max = Num Animations -1? No transition from animation to itself.</add>
-    </compound>
+    <version num="2.2.0.1b">Dragonica</version><!--33685531-->
 
     <compound name="IntermediateAnim">
         <add name="Unknown Int" type="int" />
@@ -29,6 +21,34 @@
         <add name="Num Intermediate Anims" type="int" cond="Type != 5" />
         <add name="Intermediate Anims" type="IntermediateAnim" arr1="Num Intermediate Anims" cond="Type != 5" />
         <add name="Num TextKeyPairs" type="int" cond="Type != 5" />
+    </compound>
+    
+    <compound name="UnknownData">
+        <add name="String 1" type="SizedString" />
+        <add name="String 2" type="SizedString" />
+        <add name="Unk Float 1" type="float" />
+        <add name="Unk Float 2" type="float" />
+        <add name="Unk Float 3" type="float" />
+        <add name="Unk Float 4" type="float" />
+    </compound>
+    
+    <compound name="UnknownData2">
+        <add name="String 1" type="SizedString" />
+        <add name="Unk Float" type="float" />
+    </compound>
+    
+    <compound name="Animation">
+        <add name="Event Code" type="int" />
+        <add name="Name" type="SizedString" ver2="16927488" />
+        <add name="KF File Name" type="SizedString" />
+        <add name="Index" type="int">An index?</add>
+        <add name="Num Transitions" type="int" />
+        <add name="Transitions" type="Transition" arr1="Num Transitions">Max = Num Animations -1? No transition from animation to itself.</add>
+        <add name="Num Unknown Data" type="uint" ver1="33685531" ver2="33685531" />
+        <add name="Unknown Data" type="UnknownData" arr1="Num Unknown Data" ver1="33685531" ver2="33685531" />
+        <add name="Unknown Int" type="uint" ver1="33685531" ver2="33685531" />
+        <add name="Num Unknown Data 2" type="uint" ver1="33685531" ver2="33685531" />
+        <add name="Unknown Data 2" type="UnknownData2" arr1="Num Unknown Data 2" ver1="33685531" ver2="33685531" />
     </compound>
 
     <compound name="Kfm">
